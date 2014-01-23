@@ -1,0 +1,58 @@
+<!-- ownCloud Log messages -->
+<group name="syslog,owncloud,">
+  
+  <rule id="60000" level="0">
+    <status>0</status>
+    <description>ownCloud log message.</description>
+  </rule>
+
+  <rule id="60001" level="1">
+    <status>1</status>
+    <description>ownCloud log message.</description>
+  </rule>
+
+  <rule id="60002" level="2">
+    <status>2</status>
+    <description>ownCloud log message.</description>
+  </rule>
+
+  <rule id="60003" level="3">
+    <status>3</status>
+    <description>ownCloud log message.</description>
+  </rule>
+
+  <rule id="60004" level="4">
+    <status>4</status>
+    <description>ownCloud error message.</description>
+  </rule>
+
+  <rule id="60005" level="5">
+    <status>5</status>
+    <description>ownCloud error message.</description>
+  </rule>
+
+  <rule id="60006" level="6">
+    <status>6</status>
+    <description>ownCloud error message.</description>
+  </rule>
+
+  <rule id="60007" level="7">
+    <status>7</status>
+    <description>ownCloud error message.</description>
+  </rule>
+
+  <rule id="60008" level="8">
+    <status>8</status>
+    <description>ownCloud error message.</description>
+  </rule>
+
+  <rule id="60009" level="9">
+    <status>9</status>
+    <description>ownCloud error message.</description>
+  </rule>
+
+  <rule id="60010" level="10">
+    <status>10</status>
+    <description>ownCloud error message.</description>
+  </rule>
+</group>

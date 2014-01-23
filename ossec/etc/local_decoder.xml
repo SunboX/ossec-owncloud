@@ -1,0 +1,9 @@
+<!-- ownCloud decoder.
+  - Example:
+  - {"app":"OCP\\Share","message":"Sharing backend OCA\\Contacts\\Share\\Addressbook not registered, OCA\\Contacts\\Share\\Addressbook is already registered for addressbook","level":2,"time":"2014-01-23T17:59:34+00:00"}
+  -->
+<decoder name="owncloud">
+  <prematch>^{"app":</prematch>
+  <regex>app":"(\S+)","message":"(\.+)","level":(\d+),"time":</regex>
+  <order>action, extra_data, status</order>
+</decoder>

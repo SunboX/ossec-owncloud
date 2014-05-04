@@ -30,7 +30,7 @@ Last thing is to load these newly added rules. Open the system’s `/var/ossec/e
   
   <!-- .... -->
   
-  </rules>
+  <rules>
   
     <!-- .... -->
   
@@ -42,3 +42,5 @@ Last thing is to load these newly added rules. Open the system’s `/var/ossec/e
 Only thing left is to reload your ossec:
 
 `$ sudo /var/ossec/bin/ossec-control restart`
+
+For active-respons to work, IP addresses of failed login attempts must be logged by ownCloud. Set "log_authfailip” => true," in your ownCloud configuration file.

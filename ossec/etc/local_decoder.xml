@@ -7,3 +7,17 @@
   <regex>app":"(\S+)","message":"(\.+)","level":(\d+),"time":</regex>
   <order>action, extra_data, status</order>
 </decoder>
+
+<decoder name="owncloud-failed">
+  <parent>owncloud</parent>
+  <prematch offset="after_parent">^"core","message":"Login failed:</prematch>
+  <regex>app":"(\S+)","message":"(\.+), IP:(\S+)","level":(\d+),"time":</regex>
+  <order>action, extra_data, srcip, status</order>
+</decoder>
+
+<decoder name="owncloud-malicious">
+  <parent>owncloud</parent>
+  <prematch offset="after_parent">^"core-preview","message":"Passed filename is not valid, might be malicious</prematch>
+  <regex>app":"(\S+)","message":"(\.+);ip:"(\S+)"\)","level":(\d+),"time":</regex>
+  <order>action, extra_data, srcip, status</order>
+</decoder>

@@ -15,6 +15,13 @@
   <order>action, extra_data, srcip, status</order>
 </decoder>
 
+<decoder name="owncloud7-failed">
+  <parent>owncloud</parent>
+  <prematch offset="after_parent">^"core","message":"Login failed:</prematch>
+  <regex>app":"(\S+)","message":"(\.+)\(Remote IP: '(\S+)',(\.+)","level":(\d+),"time":</regex>
+  <order>action, extra_data, srcip, extra_data, status</order>
+</decoder>
+
 <decoder name="owncloud-malicious">
   <parent>owncloud</parent>
   <prematch offset="after_parent">^"core-preview","message":"Passed filename is not valid, might be malicious</prematch>
